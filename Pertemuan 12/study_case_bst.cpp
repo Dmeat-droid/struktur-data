@@ -17,11 +17,11 @@ Node* createNode(int score) {
 
 Node* insert(Node* root, int score) {
   if (root == NULL)
-  return createNode(score);
+   return createNode(score);
   if (score < root->score)
-  root->left = insert(root->left, score);
+    root->left = insert(root->left, score);
   else if (score > root->score)
-  root->right = insert(root->right, score);
+    root->right = insert(root->right, score);
   return root;
 }
 void descending(Node* root) {
@@ -33,17 +33,18 @@ void descending(Node* root) {
 }
 bool search(Node* root, int score) {
   if (root == NULL)
-  return false;
+    return false;
   if (root->score == score)
-  return true;
+    return true;
   if (score < root->score)
-  return search(root->left, score);
+    return search(root->left, score);
   else
-  return search(root->right, score);
+    return search(root->right, score);
 }
+
 int main() {
   Node* root = NULL;
-  insert(root, 500);
+  root = insert(root, 500);
   insert(root, 300);
   insert(root, 700);
   insert(root, 200);
@@ -54,7 +55,7 @@ int main() {
   descending(root);
   int findScore = 600;
   if (search(root, findScore)) {
-    cout << "Score ditemukan" << endl;
+    cout << "Score " << findScore << " ditemukan" << endl;
   }
   else {
    cout << "Score tidak ditemukan" << endl;  

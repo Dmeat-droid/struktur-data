@@ -47,26 +47,26 @@ bool search(Node *root, int key) {
 }
 
 int main() {
-Node* root = NULL;
-root = insert(root, 34);
-insert(root, 30);
-insert(root, 70);
-insert(root, 20);
-insert(root, 23);
-insert(root, 60);
-insert(root, 80);
-cout << "Inorder Traversal: ";
+  Node* root = NULL;
+  root = insert(root, 34);
+  insert(root, 30);
+  insert(root, 70);
+  insert(root, 20);
+  insert(root, 23);
+  insert(root, 60);
+  insert(root, 80);
+  cout << "Inorder Traversal: ";
 
 
 
-inorder(root);
-cout << endl;
-int key = 60;
-if (search(root, key)) {
-cout << "Data ditemukan" << endl;
-}
-else {
-cout << "Data tidak ditemukan" << endl;
-}
-return 0;
+  inorder(root);
+  cout << endl;
+  int key = 60;
+  if (search(root, key)) {
+   cout << "Data ditemukan" << endl;
+  }
+  else {
+    cout << "Data tidak ditemukan" << endl;
+  }
+  return 0;
 }
